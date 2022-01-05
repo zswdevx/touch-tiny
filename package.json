@@ -1,10 +1,10 @@
 {
   "name": "touch-tiny",
   "version": "1.0.0",
-  "description": "一个创建文件的包",
+  "description": "一个使用touch命令创建文件的包",
   "main": "./lib/touch.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "touch": "./lib/touch"
   },
   "repository": {
     "type": "git",
