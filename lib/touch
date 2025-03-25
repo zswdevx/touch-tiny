@@ -1,29 +1,21 @@
 #!/usr/bin/env node
 
-const program = require("commander")
-const fs = require("fs");
+import Program from './Program.js'
+import { hasFileExtension, create } from './core.js'
 
+const program = new Program()
 program
-  .version('1.0.0', '-v, --version')
-  .usage('[folderName]/[filename]')
-  .description('Create a new file in the current directory')
-  .parse(process.argv);
+  .setVersion('1.0.0')
+  .setUsage('touch [folderName]/[filename]')
+  .setDescription('Create a new file or folder in the current directory')
+  .parse(process.argv)
 
-const filename = program.args.shift();
+const targetPath = program.args[0]
 
-if (!filename) return console.log('🤣 Please enter a file name')
-
-const pathArr = filename.split('/')
-
-let path = ''
-
-for (let i = 0; i < pathArr.length - 1; i++) {
-  path += pathArr[i] + '/'
-  fs.mkdirSync(path)
+try {
+  const message = create(targetPath)
+  console.log(`✅ ${message}`)
+} catch (error) {
+  console.error(`❌ Error: ${error.message}`)
+  process.exit(1)
 }
-
-const fileDescriptor = fs.openSync(filename, "a")
-const now = new Date();
-
-fs.futimesSync(fileDescriptor, now, now);
-fs.closeSync(fileDescriptor);
