@@ -30,12 +30,8 @@ describe('create', () => {
     fs.openSync.mockReturnValue(1)
     fs.futimesSync.mockImplementation(() => undefined)
     fs.closeSync.mockImplementation(() => undefined)
-    path.dirname.mockImplementation(p =>
-      p.includes('/') ? p.split('/')[0] : '.',
-    )
-    path.extname.mockImplementation(p =>
-      p.includes('.') ? p.substring(p.lastIndexOf('.')) : '',
-    )
+    path.dirname.mockImplementation(p => (p.includes('/') ? p.split('/')[0] : '.'))
+    path.extname.mockImplementation(p => (p.includes('.') ? p.substring(p.lastIndexOf('.')) : ''))
   })
 
   it('应该创建文件', () => {

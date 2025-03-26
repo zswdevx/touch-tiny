@@ -54,12 +54,21 @@ touch src/components/Button.jsx
 touch dist/assets
 ```
 
+### 创建多个文件和文件夹
+
+支持空格分隔的方式一次创建多个文件或文件夹：
+
+```shell
+touch file1.js src/utils/helpers.js dist/assets
+```
+
 ## 特性
 
 - 🚀 轻量级，无外部依赖
 - 📁 智能创建文件和文件夹
 - 🔄 自动创建不存在的目录
 - 💻 跨平台支持 (Windows, MacOS, Linux)
+- 📚 支持空格分隔一次创建多个文件或文件夹
 
 ## 许可证
 

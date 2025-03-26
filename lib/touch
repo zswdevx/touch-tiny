@@ -1,20 +1,29 @@
 #!/usr/bin/env node
 
+import { readFileSync } from 'fs'
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
 import Program from './Program.js'
 import { hasFileExtension, create } from './core.js'
 
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const packageJson = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf8'))
+const version = packageJson.version
+
 const program = new Program()
 program
-  .setVersion('1.0.0')
-  .setUsage('touch [folderName]/[filename]')
-  .setDescription('Create a new file or folder in the current directory')
+  .setVersion(version)
+  .setUsage('touch [folderName]/[filename] [folderName]/[filename] ...')
+  .setDescription('Create new files or folders in the current directory')
   .parse(process.argv)
 
-const targetPath = program.args[0]
+const paths = program.args
 
 try {
-  const message = create(targetPath)
-  console.log(`✅ ${message}`)
+  for (const targetPath of paths) {
+    const message = create(targetPath)
+    console.log(`✅ ${message}`)
+  }
 } catch (error) {
   console.error(`❌ Error: ${error.message}`)
   process.exit(1)
