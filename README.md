@@ -1,5 +1,10 @@
 # touch-tiny
 
+[![npm version](https://img.shields.io/npm/v/touch-tiny.svg)](https://www.npmjs.com/package/touch-tiny)
+[![License](https://img.shields.io/npm/l/touch-tiny.svg)](https://github.com/zhswchn/touch-tiny/blob/main/LICENSE)
+
+*简体中文 | [English](./README.en.md)*
+
 一个轻量级的文件创建工具，类似于 Unix/Linux 的 `touch` 命令，但针对 Node.js 环境优化，支持创建文件和文件夹。
 
 ## 安装
@@ -64,7 +69,7 @@ touch file1.js src/utils/helpers.js dist/assets
 
 ## 特性
 
-- 🚀 轻量级，无外部依赖
+- 🚀 轻量级，无第三方依赖包
 - 📁 智能创建文件和文件夹
 - 🔄 自动创建不存在的目录
 - 💻 跨平台支持 (Windows, MacOS, Linux)
