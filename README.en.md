@@ -1,7 +1,7 @@
 # touch-tiny
 
 [![npm version](https://img.shields.io/npm/v/touch-tiny.svg)](https://www.npmjs.com/package/touch-tiny)
-[![License](https://img.shields.io/npm/l/touch-tiny.svg)](https://github.com/zhswchn/touch-tiny/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/touch-tiny.svg)](https://github.com/zswdevx/touch-tiny/blob/main/LICENSE)
 
 *[简体中文](./README.md) | English*
 
@@ -81,4 +81,4 @@ MIT
 
 ## Contribution
 
-Feel free to submit Issues and Pull Requests to the [GitHub repository](https://github.com/zhswchn/touch-tiny).
+Feel free to submit Issues and Pull Requests to the [GitHub repository](https://github.com/zswdevx/touch-tiny).
