@@ -5,7 +5,8 @@
   "main": "./lib/touch",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "publish": "node scripts/publish.js"
   },
   "bin": {
     "touch": "lib/touch"
