@@ -1,7 +1,7 @@
 # touch-tiny
 
 [![npm version](https://img.shields.io/npm/v/touch-tiny.svg)](https://www.npmjs.com/package/touch-tiny)
-[![License](https://img.shields.io/npm/l/touch-tiny.svg)](https://github.com/zswdevx/touch-tiny/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/touch-tiny.svg)](https://github.com/zswdevx/touch-tiny/blob/master/LICENSE)
 
 *[简体中文](./README.md) | English*
 
